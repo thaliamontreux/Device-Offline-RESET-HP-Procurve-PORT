@@ -1,0 +1,16 @@
+[Unit]
+Description=Remote Camera Restart on HP Procurve
+BindTo
+Wants=network.target
+After=network.target auditd.service
+
+[Service]
+ExecStart=/sbin/pingipresetport.py
+Restart=always
+StandardInput=tty
+StandardOutput=tty
+TTYPath=/dev/tty9
+
+[Install]
+WantedBy=multi-user.target
+Alias=ipcam.service
