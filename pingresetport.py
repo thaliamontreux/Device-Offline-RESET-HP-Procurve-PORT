@@ -1,4 +1,5 @@
 #!/bin/python3
+# this file was developed to be put in the /sbin directory with the csv file in the /etc directory.
 if __name__ == '__main__':
     import os
     import telnetlib
